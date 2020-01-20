@@ -1,0 +1,11 @@
+{
+  "name": "network-listener",
+  "version": "0.0.0",
+  "description": "Browser network listener",
+  "module": "network-listener.js",
+  "repository": "pinkhominid/network-listener",
+  "files": ["/network-listener.js"],
+  "keywords": ["browser", "network", "listener"],
+  "author": "pinkhominid <pinkhominid@birdbomb.com>",
+  "license": "MIT"
+}
