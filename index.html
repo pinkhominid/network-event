@@ -1,8 +1,11 @@
 <script type=module>
-import { EVENT_TYPE } from './network-listener.js';
+import { NETWORK_EVENT, PENDING_STATE, COMPLETE_STATE } from './network-event.js';
 
-window.addEventListener(EVENT_TYPE, e => {
-  console.log(EVENT_TYPE, e.detail);
+window.addEventListener(NETWORK_EVENT, async e => {
+  switch (e.detail.state) {
+    case PENDING_STATE: console.log('loading', e.detail); break;
+    case COMPLETE_STATE: console.log(e.detail, await e.detail.json()); break;
+  }
 });
 
 fetch('https://jsonplaceholder.typicode.com/users');

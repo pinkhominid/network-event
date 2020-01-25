@@ -1,16 +1,17 @@
 {
-  "name": "network-listener",
+  "name": "network-event",
   "version": "1.0.0",
-  "description": "Browser network listener",
-  "module": "network-listener.js",
-  "repository": "pinkhominid/network-listener",
+  "description": "A global normalized event for browser network requests (fetch & XHR).",
+  "module": "network-event.js",
+  "repository": "pinkhominid/network-event",
   "files": [
-    "/network-listener.js"
+    "/network-event.js"
   ],
   "keywords": [
     "browser",
     "network",
-    "listener"
+    "request",
+    "event"
   ],
   "author": "pinkhominid <pinkhominid@birdbomb.com>",
   "license": "MIT"
