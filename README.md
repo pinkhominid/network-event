@@ -2,8 +2,12 @@
 
 A global normalized event for browser network requests (fetch & XHR).
 
+```sh
+npm i network-event
+```
+
 ```js
-import { NETWORK_EVENT, PENDING_STATE, COMPLETE_STATE } from './network-event.js';
+import { NETWORK_EVENT, PENDING_STATE, COMPLETE_STATE } from '/node_modules/network-event.js';
 
 window.addEventListener(NETWORK_EVENT, async e => {
   switch (e.detail.state) {
@@ -20,13 +24,13 @@ req.send();
 ```
 
 ```sh
-Object { state: "pending", url: "https://jsonplaceholder.typicode.com/users" }
+▸ Object { state: "pending", url: "https://jsonplaceholder.typicode.com/users" }
 
-Object { state: "pending", url: "https://jsonplaceholder.typicode.com/users" }
+▸ Object { state: "pending", url: "https://jsonplaceholder.typicode.com/users" }
 
-Object { state: "complete", url: "https://jsonplaceholder.typicode.com/users", status: 200, "content-type": "application/json; charset=utf-8", text: send(), json: send() }
-Array(10) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…} ]
+▸ Object { state: "complete", url: "https://jsonplaceholder.typicode.com/users", status: 200, "content-type": "application/json; charset=utf-8", text: send(), json: send() }
+▸ Array(10) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…} ]
 
-Object { state: "complete", url: "https://jsonplaceholder.typicode.com/users", status: 200, "content-type": "application/json; charset=utf-8", text: fetch(), json: fetch() }
-Array(10) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…} ]
+▸ Object { state: "complete", url: "https://jsonplaceholder.typicode.com/users", status: 200, "content-type": "application/json; charset=utf-8", text: fetch(), json: fetch() }
+▸ Array(10) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…} ]
 ```
