@@ -7,7 +7,7 @@ npm i network-event
 ```
 
 ```js
-import { NETWORK_EVENT, PENDING_STATE, COMPLETE_STATE } from '/node_modules/network-event.js';
+import { NETWORK_EVENT, PENDING_STATE, COMPLETE_STATE } from 'network-event';
 
 window.addEventListener(NETWORK_EVENT, async e => {
   switch (e.detail.state) {
